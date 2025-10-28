@@ -9,7 +9,7 @@
 
 ## 🚀 Enlace al Despliegue
 
-🔗 **Aplicación en producción:** [Añadir link de Vercel/Netlify aquí]
+🔗 **Aplicación en producción:** [https://golf-experience.vercel.app](https://golf-experience.vercel.app)
 
 ---
 
@@ -30,14 +30,17 @@ El golf es una afición que combina deporte, estrategia y naturaleza. Esta aplic
 ## 🛠️ Tecnologías Utilizadas
 
 ### Frontend
+
 - **HTML5 Semántico**: Estructura clara y accesible
 - **CSS3**: Diseño responsive con Grid y Flexbox
 - **JavaScript ES6+**: Lógica de la SPA, routing, fetch API
 
 ### Backend (Mock)
+
 - **json-server**: API REST falsa para simular backend
 
 ### Herramientas de Desarrollo
+
 - **live-server**: Servidor local con recarga automática
 - **Git & GitHub**: Control de versiones
 
@@ -51,11 +54,13 @@ El golf es una afición que combina deporte, estrategia y naturaleza. Esta aplic
 JSONPlaceholder es una API REST gratuita y confiable que sirve como base para obtener datos estructurados. Los datos obtenidos se transforman y enriquecen con información real de torneos de golf del PGA Tour, demostrando la capacidad de integrar y procesar datos de APIs externas.
 
 **Endpoints utilizados:**
+
 - `GET https://jsonplaceholder.typicode.com/posts?_limit=6` - Obtiene 6 registros que se transforman en torneos de golf
 
 **Datos mostrados:**
+
 - **The Masters Tournament** - Augusta National Golf Club, Georgia
-- **PGA Championship** - Quail Hollow Club, Carolina del Norte  
+- **PGA Championship** - Quail Hollow Club, Carolina del Norte
 - **U.S. Open** - Oakmont Country Club, Pennsylvania
 - **The Open Championship** - Royal Troon Golf Club, Escocia
 - **The Players Championship** - TPC Sawgrass, Florida
@@ -70,12 +75,14 @@ Los datos se muestran en la sección **"Torneos"** de la aplicación con informa
 Sigue estos pasos para ejecutar el proyecto en tu máquina:
 
 ### 1. Clonar el repositorio
+
 ```bash
 git clone https://github.com/eugeniogzc/golf-experience.git
 cd golf-experience
 ```
 
 ### 2. Instalar dependencias
+
 ```bash
 npm install
 ```
@@ -85,18 +92,23 @@ npm install
 **⚠️ IMPORTANTE:** Necesitas abrir **DOS TERMINALES** simultáneamente.
 
 #### Terminal 1: Servidor Web (Frontend)
+
 ```bash
 npm start
 ```
+
 La aplicación se abrirá automáticamente en `http://localhost:8080`
 
 #### Terminal 2: API Mock (Backend)
+
 ```bash
 npm run server-mock
 ```
+
 La API falsa correrá en `http://localhost:3000`
 
 ### 4. ¡Listo!
+
 Abre tu navegador en `http://localhost:8080` y navega por la aplicación.
 
 ---
@@ -104,41 +116,50 @@ Abre tu navegador en `http://localhost:8080` y navega por la aplicación.
 ## ✅ Requisitos del Proyecto Cumplidos
 
 ### 1. Framework y Estructura (25%)
+
 ✅ **SPA con JavaScript Vanilla**: Routing manual con hash (`#/`) sin recargas  
 ✅ **Componentes reutilizables**: Cada página es un módulo independiente  
 ✅ **Gestión de estado**: Manejo de rutas y eventos del DOM
 
 ### 2. Consumo de API Externa (15%)
+
 ✅ **Fetch API**: Conexión asíncrona con API de torneos de golf  
 ✅ **Gestión de estados**: Loading, éxito y error  
 ✅ **Integración útil**: Los datos se muestran en cards responsivas
 
 ### 3. API Propia y Formularios (15%)
+
 ✅ **Formulario funcional**: Permite publicar consejos de golf  
 ✅ **Validaciones robustas**:
-  - Campos requeridos
-  - Longitud mínima (título: 3 caracteres, consejo: 10 caracteres)  
-✅ **Petición POST**: Envía datos a `json-server` (API mock)
+
+- Campos requeridos
+- Longitud mínima (título: 3 caracteres, consejo: 10 caracteres)  
+  ✅ **Petición POST**: Envía datos a `json-server` (API mock)
 
 ### 4. Seguridad (15%)
+
 ✅ **Prevención de XSS**:
-  - Función `sanitizeHTML()` en torneos.js
-  - Uso de `.textContent` en mensajes de error
-  - Sanitización de datos de API externa  
-✅ **Validación de entrada**: Formulario valida tipo, formato y longitud
+
+- Función `sanitizeHTML()` en torneos.js
+- Uso de `.textContent` en mensajes de error
+- Sanitización de datos de API externa  
+  ✅ **Validación de entrada**: Formulario valida tipo, formato y longitud
 
 ### 5. Rendimiento (10%)
+
 ✅ **Lazy Loading**: `loading="lazy"` en imagen de home  
 ✅ **Código minificado**: Automático en despliegue de producción  
 ✅ **Optimización CSS**: Box-sizing, transiciones con GPU
 
 ### 6. Diseño Responsive (10%)
+
 ✅ **HTML Semántico**: `<header>`, `<main>`, `<section>`, `<article>`  
 ✅ **CSS Grid**: Layout adaptable de torneos  
 ✅ **Media Queries**: Breakpoints para móvil (480px) y tablet (768px)  
 ✅ **Mobile-first**: Navegación adaptativa
 
 ### 7. Gestión del Proyecto (10%)
+
 ✅ **Repositorio Git**: Control de versiones en GitHub  
 ✅ **README completo**: Este documento  
 ✅ **Despliegue funcional**: [Añadir link aquí]
@@ -167,20 +188,22 @@ golf-experience/
 ## 🔒 Medidas de Seguridad Implementadas
 
 ### Prevención de XSS (Cross-Site Scripting)
+
 ```javascript
 // Sanitización de datos de API externa
 const sanitizeHTML = (text) => {
-  const div = document.createElement('div');
-  div.textContent = text;  // Escapa caracteres HTML
+  const div = document.createElement("div");
+  div.textContent = text; // Escapa caracteres HTML
   return div.innerHTML;
 };
 ```
 
 ### Validación de Formularios
+
 ```javascript
 // Validación en cliente
 if (titulo.length < 3) {
-  errorDiv.textContent = 'El título debe tener al menos 3 caracteres.';
+  errorDiv.textContent = "El título debe tener al menos 3 caracteres.";
   return;
 }
 ```
@@ -189,19 +212,21 @@ if (titulo.length < 3) {
 
 ## 📱 Capturas de Pantalla
 
-*(Opcional: Añade capturas de pantalla de tu aplicación funcionando)*
+_(Opcional: Añade capturas de pantalla de tu aplicación funcionando)_
 
 ---
 
 ## 🚀 Despliegue en Producción
 
 ### Opción 1: Vercel (Recomendado)
+
 1. Ir a [vercel.com](https://vercel.com)
 2. Conectar con GitHub
 3. Importar repositorio `golf-experience`
 4. Deploy automático
 
 ### Opción 2: Netlify
+
 1. Ir a [netlify.com](https://netlify.com)
 2. Conectar con GitHub
 3. Build settings: dejar en blanco (es SPA estática)
