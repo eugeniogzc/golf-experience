@@ -1,0 +1,25 @@
+{
+  "name": "golf-experience",
+  "version": "1.0.0",
+  "description": "SPA en JavaScript Vanilla sobre Golf - Proyecto Mi Pasión Web",
+  "main": "index.js",
+  "scripts": {
+    "start": "live-server --port=8080",
+    "server-mock": "json-server --watch db.json --port 3000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eugeniogzc/golf-experience.git"
+  },
+  "keywords": ["spa", "golf", "vanilla-js"],
+  "author": "Eugenio Garza",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eugeniogzc/golf-experience/issues"
+  },
+  "homepage": "https://github.com/eugeniogzc/golf-experience#readme",
+  "devDependencies": {
+    "json-server": "^0.17.4",
+    "live-server": "^1.2.2"
+  }
+}

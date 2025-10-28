@@ -1,0 +1,244 @@
+/* Global */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  background-color: #f5f5f5;
+  color: #222;
+}
+
+a {
+  color: #1b5e20;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+/* Header */
+.main-header {
+  background: #1b5e20;
+  color: white;
+  padding: 1.2rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.main-header h1 {
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+.main-nav a {
+  color: white;
+  margin-left: 1rem;
+  font-weight: 500;
+  transition: opacity 0.2s ease;
+}
+
+.main-nav a:hover {
+  opacity: 0.8;
+}
+
+/* Layout */
+main#app {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 1rem;
+  min-height: 70vh;
+}
+
+/* Grid de Torneos - REQUISITO RESPONSIVE */
+#torneos-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+/* Cards */
+.card {
+  background: white;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: #1b5e20;
+}
+
+.card p {
+  margin: 0.5rem 0;
+  line-height: 1.5;
+}
+
+/* Página Home */
+.page-home {
+  text-align: center;
+}
+
+.page-home h2 {
+  font-size: 2rem;
+  color: #1b5e20;
+  margin-bottom: 1rem;
+}
+
+.page-home p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #555;
+}
+
+.page-home img {
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+/* Formulario */
+.page-form {
+  max-width: 600px;
+  margin: 0 auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  color: #333;
+}
+
+input, 
+textarea {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: inherit;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #1b5e20;
+  box-shadow: 0 0 0 3px rgba(27, 94, 32, 0.1);
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+button {
+  background: #1b5e20;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.4rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background 0.2s ease;
+}
+
+button:hover {
+  background: #388e3c;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+/* Mensajes de Error - REQUISITO SEGURIDAD */
+.error {
+  color: #d32f2f;
+  font-weight: 500;
+  margin-top: 0.5rem;
+  padding: 0.75rem;
+  background-color: #ffebee;
+  border-left: 4px solid #d32f2f;
+  border-radius: 4px;
+}
+
+#error-msg {
+  min-height: 1rem;
+}
+
+/* Footer */
+.main-footer {
+  background: #1b5e20;
+  color: #eee;
+  text-align: center;
+  padding: 1.2rem;
+  font-size: 0.9rem;
+  margin-top: 3rem;
+}
+
+/* Responsive - REQUISITO RESPONSIVE */
+@media (max-width: 768px) {
+  .main-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .main-nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  
+  .main-nav a {
+    margin: 0.5rem 0.5rem 0.5rem 0;
+  }
+  
+  #torneos-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .page-form {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-header h1 {
+    font-size: 1.3rem;
+  }
+  
+  .page-home h2 {
+    font-size: 1.5rem;
+  }
+  
+  main#app {
+    padding: 0.5rem;
+  }
+}
+  
