@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacto - Golf Experience</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">Golf<span>Experience</span></div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="historia.html">Historia</a></li>
+        <li><a href="contacto.html" class="active">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="contact">
+    <h1>Contáctanos</h1>
+    <p>Déjanos un mensaje y te responderemos a la brevedad.</p>
+
+    <form id="contactForm">
+      <div class="form-group">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Correo electrónico</label>
+        <input type="email" id="email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" rows="5" required></textarea>
+      </div>
+
+      <button type="submit" class="btn">Enviar mensaje</button>
+      <p id="respuesta"></p>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 Golf Experience</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
